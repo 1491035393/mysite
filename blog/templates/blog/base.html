@@ -1,0 +1,19 @@
+{% load staticfiles %}<!--导入staticfiles模板标签-->
+
+<! DOCTYPE html><!--定义文件类型-->
+<html>
+<head>
+    <title>{% block title %}{% endblock %}</title><!--定义第一个block名叫title-->
+    <link href="{% static 'css/blog.css' %}" rel="stylesheet"><!--static标签会生成静态文件的绝对路径-->
+</head>
+<body>
+    <div id="content">
+        {% block content %}
+        {% endblock %}
+    </div>
+    <div id="sidebar">
+        <h2>My blog</h2>
+            <p>This is my blog.</p>
+    </div>
+</body>
+</html>

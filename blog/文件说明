@@ -1,0 +1,13 @@
+admin.py:在这里注册模型，使它们包含于django的管理网站中，
+
+migrations:这个目录将包含你的数据库迁移内容，它允许django跟踪你模型的变化，并据此同步数据库
+
+models.py:你app的模型数据，所有的Django应用都需要一个models.py文件，但这个文件可以留空
+
+test.py:用于为应用添加测试
+
+views.py:应用的逻辑在这里跑起，每个view接受一个http请求，处理他，并返回一个response
+
+urls.py:路由文件，在每个应用中创建urls.py是为了必要时能在其他项目中重复利用这个应用
+
+每个文件都加了# -*-coding:utf-8 -*-，是为了中文注释时不报错

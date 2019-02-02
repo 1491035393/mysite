@@ -1,0 +1,14 @@
+DEBUG：是一个是否切换成debug模式的开关，布尔类型
+
+ALLOWED_HOSTS:在DEBUG模式为TRUE时并不起作用，当DEBUG为False时，需要添加所设定的服务器的域名或主机名以确保
+    能运行django网站
+
+INSTALLED_APPS:在所有项目里都必须编辑的列表类型数据，告诉django对于这个项目那些app时活跃的
+
+MIDDLEWARE_CLASSES：是一个包含了在中间层需要处理的事物的元组
+
+ROOT_URLCONF：指示应用的根url样式的python包
+
+DATABASES：一个包含项目里用到的所有数据库类型的目录，必须有一默认数据库，默认数据库为SQLLite3
+
+LANGUAGE_CODE：定义默认编码

@@ -1,0 +1,6 @@
+1，__init__.py:告诉python将mysite目录（当前）当成一个python模板
+2，settings.py:项目总的配置文件
+3，urls.py:所有路由入口
+4，wsgi.py:配置项目成一个WSGI应用，wsgi:python web server Gateway interface,python网关接口，是python应用程序或框架和
+    web之间的一种接口
+5，manage.py:提供命令行管理项目文件，不需要编辑此文件！！
