@@ -29,6 +29,7 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 
+SITE_ID = 1
 # Application definition
 
 INSTALLED_APPS = (
@@ -40,7 +41,10 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     # my application
     'blog',
-    'taggit'
+    'taggit',
+    'django.contrib.sites',
+    'django.contrib.sitemaps',
+    'haystack'
 )
 
 MIDDLEWARE_CLASSES = (
@@ -117,3 +121,12 @@ EMAIL_HOST_USER = '1491035393@qq.com'
 EMAIL_HOST_PASSWORD = 'dsvanucoiambiidd'
 # 收件人看到的发件人
 EMAIL_FROM = 'python<149103593@qq.com>'
+
+# define the engine backends for haystack
+HAYSTACK_CONNECTIONS = {
+    'default': {
+        'ENGINE': 'haystack.backends.solr_backend.SolrEngine',
+        'URL': 'http://127.0.0.1:8983/solr/blog'
+    },
+}
+

@@ -3,6 +3,7 @@
 # author：feng time:2019/1/26
 from django.conf.urls import url
 from . import views
+from .feeds import LatestPostsFeed
 
 urlpatterns = [
     # post views
@@ -16,4 +17,6 @@ urlpatterns = [
         name='post_detail'),  # year要求4个digital，month要求2个，day要求2个，post可以由单词和字符串组成
     url(r'^(?P<post_id>\d+)/share/$',views.post_share,
         name='post_share'),
+    url(r'^feed/$', LatestPostsFeed(), name='post_feed'),
+    url(r'^search/$', views.post_search, name='post_search'),
 ]

@@ -20,3 +20,7 @@ class CommentForm(forms.ModelForm):
         model = Comment  # 这里告诉django我们要创建表格的模型名称，它会自动为我们创建（因为继承了这个类的原因）
         fields = ('name', 'email', 'body')  # 用一个列表fields告诉django我们希望包含的表单字段，默认为所有的模型
         # 字段创建表单字段
+
+
+class SearchForm(forms.Form):
+    query = forms.CharField()

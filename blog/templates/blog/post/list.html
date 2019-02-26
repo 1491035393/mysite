@@ -1,4 +1,5 @@
 {% extends "blog/base.html" %}<!--继承blog/base.html-->
+{% load blog_tags %}
 
 {% block title %}My Blog{% endblock %}
 
@@ -25,7 +26,7 @@
         <p class="date">
             published {{ post.publish }} by {{ post.author }}
         </p>
-        {{ post.body|truncatewords:30|linebreaks }}<!-- 两个模板过滤器，对出现的文体做一定限制-->
+        {{ post.body|markdown|truncatewords_html:30 }}<!-- 两个模板过滤器，对出现的文体做一定限制-->
     {% endfor %}
     {% include "pagination.html" with page=posts %}<!--django listview（基于类的视图时）把取回的页面叫做page_obj,-->
 <!--普通视图取回页面自定义，之前我们定义的是posts-->
